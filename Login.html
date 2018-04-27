@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login Page</title>
+    <link rel="stylesheet" href="LoginCSS.css">
+    
+  </head>
+  
+  <header>
+  <img src="http://wintersanctuary.com/wp-content/uploads/2016/05/WS-Logo.png" alt="logo" />
+  <h1>Volunteer Coordinator Login</h1>
+  </header>
+  
+  <body>
+  	<div class="login-page">
+  	<div class="form">
+  			<form class="register-form">
+  			<input type="text" placeholder="username"/>
+  			<input type="password" placeholder="password"/>
+  			<input type="text" placeholder="email id"/>
+  			<button type="button" onclick="check(this.form)" value="Create"/>  Create </button>
+  			<p class="message"> Already Registered? <a href="#">Login</a> </p>
+  			</form>
+  			
+  			<form class="login-form">
+  			<input type="text" placeholder="username" name="userid"/>
+  			<input type="password" placeholder="password" name="pswrd"/>
+  			<button type="button" onclick="check(this.form)" value="Login"/> Login </button>
+  			<p class="message"> Not Registered? <a href="#"> Click Here</a> </p>
+  			</form>
+  			
+  	</div>
+  	</div>
+  	
+  	<script src='https://code.jquery.com/jquery-3.2.1.min.js'> </script>
+  	
+  	<script>
+  	$('.message a').click (function(){
+  		$('form').animate ({height:"toggle",opacity:"toggle"}, "slow");
+  	});
+  	
+  	function check(form) {
+  		if(form.userid.value == "Molly" && form.pswrd.value == "123" ) {
+  			window.open('https://cslab.kenyon.edu/class/ssd/solorioc/WS_Volunteer_Scheduling/volunteer_schedule.html','_self')
+  			}else {
+  			window.alert("Incorrect username or password")
+  			}
+  	}
+  	
+  	</script>
+  	
+  	</div>
+  	</div>
+  			
+  </body>
+  
+</html>
